@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:sdw2023
+    username: sdw2023
+    password:
+  jpa:
+    show-sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+  h2:                # <--- ATENÇÃO AQUI: Traga o h2 para a esquerda!
+    console:
+      enabled: true  # <--- Verifique se escreveu "enabled" (com 'd' no final)
+      path: /h2-console
+      settings:
+        trace: false
+        web-allow-others: false
